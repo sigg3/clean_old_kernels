@@ -108,6 +108,6 @@ echo "$KERNELS" | while read -r krnl ; do
   export KERN_REM_COUNT
 done
 
-echo "Removed $REM_COUNT kernels from /boot !" # not sure if count is accurate TODO
+echo "Removed $KERN_REM_COUNT kernels from /boot !" # not sure if count is accurate TODO
 echo "Done."
 exit 0
