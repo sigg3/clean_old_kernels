@@ -1,5 +1,5 @@
 # clean_old_kernels
-Dead simple script to remove "unused" kernels in Pop_OS!
+Dead simple script to remove (apt remove --purge) "unused" kernels in Pop_OS!
 
 Usage: /bin/bash clean_kernels.sh
 
