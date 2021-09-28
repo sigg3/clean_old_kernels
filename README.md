@@ -7,7 +7,7 @@ Usage: /bin/bash clean_kernels.sh
 0. Gets current kernel (uname -r)
 1. Searches for kernels installed in /boot
 2. Searches for symlink named vmlinuz* in /boot
-3. Deletes kernels that are not current or symlinks*
+3. apt remove --purge kernels that are not current or symlinks*
 
 Then it asks user for permission to purge the "unused" kernels from the system with apt.
 
