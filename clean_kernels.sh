@@ -75,7 +75,7 @@ if [ "$NUM_SYMLINKS" -gt "0" ] ; then
 fi
 
 if [ "$NUM_SYMLINKS" -eq "$NUM_KERNELS" ] ; then
-  echo -e "\nERR: Installed kernels are reserved." ; exit 1
+  echo -e "\nERR: Installed kernels are reserved." ; exit 2
 else
   echo -e "\n$((NUM_KERNELS - NUM_SYMLINKS)) kernel(s) marked for removal"
 fi
@@ -83,7 +83,7 @@ fi
 read -t 60 -sn 1 -p "This will uninstall kernels. Proceed? [y/N] " U_PROMPT
 case "$U_PROMPT" in
 "y" | "Y" ) true ;;
-* ) echo "Aborted." ; exit 2 ;;
+* ) echo "Aborted." ; exit 3 ;;
 esac
 
 if [ "$USE_SUDO" -eq "1" ] ; then
