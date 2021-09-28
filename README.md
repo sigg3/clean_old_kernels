@@ -7,11 +7,23 @@ Usage: /bin/bash clean_kernels.sh
 0. Gets current kernel (uname -r)
 1. Searches for kernels installed in /boot
 2. Searches for symlink named vmlinuz* in /boot
-3. apt remove --purge kernels that are not current or symlinks*
+3. apt remove --purge kernels that are not current or symlinks* (* unless PURGE set to 1. Then only current is reserved.)
 
 Then it asks user for permission to purge the "unused" kernels from the system with apt.
 
-(* Unless PURGE is set to 1. Then only current kernel is kept)
+Pop_OS symlinks current (vmlinuz) and previous kernel (vmlinuz.old).
+
+User can create symlink of kernels they want to keep, e.g. ``sudo ln -s /boot/vmlinuz-5.13.0-7614-generic /boot/vmlinuz.keep``.
+
+# Exit codes
+0 ) Success
+
+1 ) Too few or can't determine number of kernels 
+
+2 ) All installed kernels are reserved
+
+3 ) User aborted
+
 
 # This is dumb
 Yes. It's a dumb task I find myself googling once too often. So I created this script instead :)
