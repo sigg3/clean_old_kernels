@@ -14,7 +14,11 @@
 #
 # Submit bugs at: <https://github.com/sigg3/clean_old_kernels/issues>
 
+# TODO parse cli args
+# Args are:
+# use_sudo, remove_all, no_prompts
 
+# TODO no_prompts/quiet
 
 # Will ask for sudo while running (default 1)
 USE_SUDO="1"
@@ -22,7 +26,7 @@ USE_SUDO="1"
 # Set to 1 to erase all but current kernel (default 0)
 PURGE="0"
 
-USAGE="This program searches for and removes \"unused\" kernels in Pop_OS"
+USAGE="This program searches for and removes \"unused\" kernels in Pop_OS" # TODO echo this anyway and make usage optional
 
 
 echo "$USAGE"
