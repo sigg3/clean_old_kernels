@@ -4,7 +4,14 @@ Dead simple script to remove (apt remove --purge) "unused" kernels in Pop_OS!
 Usage: /bin/bash clean_kernels.sh
 
 # What does it do?
-Searches for kernels installed in /boot and mark for deletion; searches for symlinks named vmlinuz in /boot (that are typically current or .old kernel) and these are reserved (unless PURGE is set to 1). Then it asks user for permission to purge the "unused" kernels from the system with apt.
+0. Gets current kernel (uname -r)
+1. Searches for kernels installed in /boot
+2. Searches for symlink named vmlinuz* in /boot
+3. Deletes kernels that are not current or symlinks*
+
+Then it asks user for permission to purge the "unused" kernels from the system with apt.
+
+* (Unless PURGE is set to 1. Then only current kernel is kept)
 
 # This is dumb
 Yes. It's a dumb task I find myself googling once too often. So I created this script instead :)
