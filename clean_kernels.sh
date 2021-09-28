@@ -42,9 +42,9 @@ NUM_OK="0"
 case "$NUM_KERNELS" in
 1 ) echo "ERR: Nothing to do, just 1 kernel installed." ;;
 2 ) if [ "$PURGE" -ne "1" ] ; then
-	echo "ERR: Nothing to do, not enough kernels installed (2)"
+      echo "ERR: Nothing to do, not enough kernels installed (2)"
     else
-	NUM_OK="1"
+      NUM_OK="1"
     fi
     ;;
 0 ) echo "ERR: Can't determine number of kernels installed." ;;
@@ -90,14 +90,15 @@ fi
 # Finally we get to do the stuff
 KERN_REM_COUNT="0"
 echo "$KERNELS" | while read -r krnl ; do
+  if echo "$krnl" | grep -i -q "$CURRENT" ; then
+    echo "Skipping $krnl (current kernel)"
+    continue
+  fi
   if [ "$PURGE" -eq "0" ] ; then
     if echo "$LINK_TARGETS" | tr "\n" " " | grep -i -q "$krnl" ; then
       echo "Skipping $krnl (reserved)"
       continue
     fi
-  fi
-  if echo "$krnl" | grep -i -q "$CURRENT" ; then
-    echo "Skipping $krnl (current kernel)"
   fi
   if [ "$USE_SUDO" -eq "1" ] ; then
 	sudo apt remove --purge -y "$krnl"
