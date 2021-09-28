@@ -24,13 +24,13 @@ User can create symlink of kernels they want to keep, e.g. ``sudo ln -s /boot/vm
 
 3 ) User aborted
 
-
-# This is dumb
-Yes. It's a dumb task I find myself googling once too often. So I created this script instead :)
-
 # TODOs
 * Allow CLI args to control it. Args are: use_sudo, remove_all, no_prompts
 * quiet mode (no prompts, just goes aheads and deletes)
+
+
+# This is dumb
+Yes. It's a dumb task I find myself googling once too often. So I created this script instead :)
 
 # Note
 clean_kernels.sh is distributed in the hope that it will be useful, but WITHOUT ANY WARRANTY; without even the implied warranty of MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE.  See the GNU General Public License for more details.
