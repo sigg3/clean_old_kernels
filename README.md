@@ -11,10 +11,14 @@ Usage: /bin/bash clean_kernels.sh
 
 Then it asks user for permission to purge the "unused" kernels from the system with apt.
 
-* (Unless PURGE is set to 1. Then only current kernel is kept)
+(* Unless PURGE is set to 1. Then only current kernel is kept)
 
 # This is dumb
 Yes. It's a dumb task I find myself googling once too often. So I created this script instead :)
+
+# TODOs
+* Allow CLI args to control it. Args are: use_sudo, remove_all, no_prompts
+* quiet mode (no prompts, just goes aheads and deletes)
 
 # Note
 clean_kernels.sh is distributed in the hope that it will be useful, but WITHOUT ANY WARRANTY; without even the implied warranty of MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE.  See the GNU General Public License for more details.
