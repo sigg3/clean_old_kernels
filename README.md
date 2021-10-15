@@ -27,7 +27,6 @@ User can create symlink of kernels they want to keep, e.g. ``sudo ln -s /boot/vm
 
 
 
-# Notes
 ## TODOs
 * Allow CLI args to control it. Args are: use_sudo, remove_all, no_prompts, keep
 * Implement keep, which is number of kernels to keep (e.g. 4) ./clean_kernels.sh keep=4
