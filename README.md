@@ -25,8 +25,9 @@ User can create symlink of kernels they want to keep, e.g. ``sudo ln -s /boot/vm
 3 ) User aborted
 
 # TODOs
-* Allow CLI args to control it. Args are: use_sudo, remove_all, no_prompts
-* quiet mode (no prompts, just goes aheads and deletes)
+* Allow CLI args to control it. Args are: use_sudo, remove_all, no_prompts, keep
+* Implement keep, which is number of kernels to keep (e.g. 4) ./clean_kernels.sh keep=4
+* quiet mode (no_prompts, just goes aheads and deletes)
 
 
 # This is dumb
